@@ -1,9 +1,13 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../AuthProviders/AuthProvider";
 import { useForm } from "react-hook-form";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
+  const [showPassword, setShowPassword] = useState(false);
 
   const {
     register,
@@ -11,14 +15,27 @@ const Register = () => {
     watch,
     formState: { errors },
   } = useForm();
+
   const onSubmit = (data) => {
     const { email, password } = data;
+    if (password.length < 6) {
+      toast.error("Password must be at least 6 characters long");
+      return;
+    } else if (!/[A-Z]/.test(password)) {
+      toast.error("Password must contain at least one uppercase letter");
+      return;
+    } else if (!/[a-z]/.test(password)) {
+      toast.error("Password must contain at least one lowercase letter");
+      return;
+    }
     createUser(email, password)
       .then((result) => {
         console.log(result);
+        toast.success("User Created Successfully");
       })
       .catch((error) => {
         console.error(error);
+        toast.error(error.message);
       });
   };
   return (
@@ -74,13 +91,23 @@ const Register = () => {
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <input
-                  type="password"
-                  name="password"
-                  placeholder="password"
-                  className="input input-bordered"
-                  {...register("password", { required: true })}
-                />
+
+                <div className="flex items-center">
+                  <input
+                    type={showPassword ? "text" : "password"}
+                    name="password"
+                    placeholder="password"
+                    className="input input-bordered w-full"
+                    {...register("password", { required: true })}
+                  />
+                  <span
+                    className="text-2xl  absolute  right-10"
+                    onClick={() => setShowPassword(!showPassword)}
+                  >
+                    {showPassword ? <FaEye /> : <FaEyeSlash />}
+                  </span>
+                </div>
+
                 {errors.password && (
                   <span className="text-red-600">This field is required</span>
                 )}
@@ -90,9 +117,17 @@ const Register = () => {
                 <button className="btn btn-primary">Register</button>
               </div>
             </form>
+
+            <p className="px-4 text-center dark:text-gray-600">
+              Already have an account?
+              <NavLink to="/login" className="text-green-500">
+                Login
+              </NavLink>
+            </p>
           </div>
         </div>
       </div>
+      <Toaster position="bottom-center" reverseOrder={false} />
     </div>
   );
 };

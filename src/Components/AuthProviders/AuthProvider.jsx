@@ -16,11 +16,11 @@ const AuthProvider = ({ children }) => {
   };
 
   // sign in user
-  const signInUser = () => {
+  const signInUser = (email,password) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
-  // onserver
+  // observer
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
