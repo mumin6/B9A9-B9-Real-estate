@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../AuthProviders/AuthProvider";
 
 const Navbar = () => {
   const navLinks = (
@@ -17,6 +19,7 @@ const Navbar = () => {
       </li>
     </>
   );
+  const { logOut, user } = useContext(AuthContext);
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -45,30 +48,36 @@ const Navbar = () => {
           </ul>
         </div>
         <NavLink to="/">
-          <a className="btn btn-ghost text-xl">Luxury Estate</a>
+          <a className="btn btn-ghost md:text-xl text-base">Luxury Estate</a>
         </NavLink>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
       <div className="navbar-end">
-        <div className="dropdown dropdown-end">
-          <div
-            tabIndex={0}
-            role="button"
-            className="btn btn-ghost btn-circle avatar"
-          >
-            <div className="w-10 rounded-full md:tooltip" data-tip="name">
-              <img
-                alt="Tailwind CSS Navbar component"
-                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
-              />
+        {user ? (
+          <div className="dropdown dropdown-end flex">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost btn-circle avatar "
+            >
+              <div className="w-10 rounded-full md:tooltip" data-tip="name">
+                <img
+                  alt="Tailwind CSS Navbar component"
+                  src={user}
+                />
+              </div>
+            </div>
+            <div>
+              <button onClick={()=>logOut()} className="btn btn-ghost">Logout</button>
             </div>
           </div>
-        </div>
-        <div>
-          <a className="btn">Login</a>
-        </div>
+        ) : (
+          <div>
+            <a className="btn">Login</a>
+          </div>
+        )}
       </div>
     </div>
   );

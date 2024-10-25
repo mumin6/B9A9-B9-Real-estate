@@ -12,7 +12,6 @@ const Register = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
 
@@ -41,7 +40,12 @@ const Register = () => {
   return (
     <div>
       <div className="hero  min-h-screen">
-        <div className="hero-content flex-col lg:flex-row-reverse">
+        <div className="hero-content flex-col">
+          <div className="text-center lg:text-left">
+            <h1 className="text-2xl font-bold">Register now!</h1>
+            
+          </div>
+
           <div className="card bg-base-200 w-full max-w-sm shrink-0 shadow-2xl">
             <form onSubmit={handleSubmit(onSubmit)} className="card-body">
               <div className="form-control">
@@ -118,8 +122,8 @@ const Register = () => {
               </div>
             </form>
 
-            <p className="px-4 text-center dark:text-gray-600">
-              Already have an account?
+            <p className="px-4 text-center ">
+              Already have an account?<span>{ " "}</span>
               <NavLink to="/login" className="text-green-500">
                 Login
               </NavLink>
