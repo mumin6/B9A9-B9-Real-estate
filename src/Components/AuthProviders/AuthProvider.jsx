@@ -9,6 +9,7 @@ import {
 } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../../Firebase/Firebase.config";
+import PropTypes from 'prop-types';
 
 export const AuthContext = createContext(null);
 // social auth provider
@@ -37,7 +38,9 @@ const AuthProvider = ({ children }) => {
   };
   //  LogOut
   const logOut = () => {
-    return signOut(auth)
+    setUser(null)
+    signOut(auth)
+    
   }
 
   // observer
@@ -49,10 +52,14 @@ const AuthProvider = ({ children }) => {
     });
   },[]);
 
-  const allValues = { createUser, signInUser, googleLogIn, githubLogin,logOut,user };
+  const allValues = { createUser, signInUser, googleLogIn, githubLogin,logOut,user, };
   return (
     <AuthContext.Provider value={allValues}>{children}</AuthContext.Provider>
   );
 };
+
+AuthProvider.propTypes = {
+  children:PropTypes.object.isRequired,
+}
 
 export default AuthProvider;

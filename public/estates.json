@@ -1,0 +1,148 @@
+[
+  {
+    "id": 1,
+    "estate_title": "Oceanview Penthouse",
+    "segment_name": "Luxury Apartments",
+    "description": "A stunning penthouse offering panoramic ocean views, with modern design and top-tier amenities.",
+    "price": "$4,500,000",
+    "status": "sale",
+    "area": "3500 sq ft",
+    "location": "Miami, FL",
+    "facilities": [
+      "Living Room",
+      "Swimming Pool",
+      "Kitchen",
+      "Private Elevator",
+      "Rooftop Terrace"
+    ],
+    "image": "https://i.ibb.co.com/k8XDK3v/Oceanviewpenthouse8.webp",
+    "button_text": "View Property"
+  },
+  {
+    "id": 2,
+    "estate_title": "Countryside Manor",
+    "segment_name": "Luxury Estates",
+    "description": "A grand countryside estate surrounded by lush greenery, offering privacy and serene living.",
+    "price": "$7,200,000",
+    "status": "sale",
+    "area": "5000 sq ft",
+    "location": "Greenwich, CT",
+    "facilities": [
+      "Living Room",
+      "Swimming Pool",
+      "Kitchen",
+      "Home Theater",
+      "Wine Cellar"
+    ],
+    "image": "https://i.ibb.co.com/Qf0vdjR/Countryside-Manor.webp",
+    "button_text": "View Property"
+  },
+  {
+    "id": 3,
+    "estate_title": "Skyline City Loft",
+    "segment_name": "Luxury Lofts",
+    "description": "A modern loft with breathtaking city skyline views, featuring high ceilings and a sleek interior.",
+    "price": "$1,800,000",
+    "status": "sale",
+    "area": "2200 sq ft",
+    "location": "New York, NY",
+    "facilities": ["Living Room", "Kitchen", "Gym", "Private Balcony"],
+    "image": "https://i.ibb.co.com/1dDTLKd/Skyline-City-Loft.jpg",
+    "button_text": "View Property"
+  },
+  {
+    "id": 4,
+    "estate_title": "Beachside Villa",
+    "segment_name": "Luxury Villas",
+    "description": "A beachfront villa with direct access to the shore, offering luxury, tranquility, and spectacular sunsets.",
+    "price": "$3,900,000",
+    "status": "rent",
+    "area": "4000 sq ft",
+    "location": "Malibu, CA",
+    "facilities": [
+      "Living Room",
+      "Swimming Pool",
+      "Kitchen",
+      "Outdoor Lounge",
+      "Private Beach Access"
+    ],
+    "image": "https://i.ibb.co.com/vZ5pB57/Beachside-Villa.jpg",
+    "button_text": "View Property"
+  },
+  {
+    "id": 5,
+    "estate_title": "Mountain Escape Chalet",
+    "segment_name": "Luxury Retreats",
+    "description": "A cozy mountain retreat nestled in the Alps, ideal for a winter getaway with breathtaking mountain views.",
+    "price": "$2,500,000",
+    "status": "sale",
+    "area": "3000 sq ft",
+    "location": "Aspen, CO",
+    "facilities": [
+      "Living Room",
+      "Kitchen",
+      "Fireplace",
+      "Private Sauna",
+      "Hot Tub"
+    ],
+    "image": "https://i.ibb.co.com/s5xBwR1/Mountain-Escape-Chalet1.jpg",
+    "button_text": "View Property"
+  },
+  {
+    "id": 6,
+    "estate_title": "City Penthouse Suite",
+    "segment_name": "Luxury Apartments",
+    "description": "A high-end penthouse located in the heart of the city with luxurious furnishings and unparalleled city views.",
+    "price": "$6,000,000",
+    "status": "sale",
+    "area": "4000 sq ft",
+    "location": "Los Angeles, CA",
+    "facilities": [
+      "Living Room",
+      "Kitchen",
+      "Rooftop Terrace",
+      "Private Gym",
+      "Infinity Pool"
+    ],
+    "image": "https://i.ibb.co.com/x8NRPP3/City-Penthouse-Suite.jpg",
+    "button_text": "View Property"
+  },
+  {
+    "id": 7,
+    "estate_title": "Tropical Island Villa",
+    "segment_name": "Luxury Villas",
+    "description": "A secluded villa on a private island, offering endless ocean views and complete privacy in tropical paradise.",
+    "price": "$12,000,000",
+    "status": "sale",
+    "area": "6000 sq ft",
+    "location": "Fiji Islands",
+    "facilities": [
+      "Living Room",
+      "Kitchen",
+      "Private Beach",
+      "Infinity Pool",
+      "Outdoor Dining Area"
+    ],
+    "image": "https://i.ibb.co.com/0cd0FH8/Tropical-Island-Villa.jpg",
+    "button_text": "View Property"
+  },
+  {
+    "id": 8,
+    "estate_title": "Lakeside Mansion",
+    "segment_name": "Luxury Estates",
+    "description": "A beautiful lakeside mansion with spacious grounds, offering stunning lake views and tranquility.",
+    "price": "$5,500,000",
+    "status": "rent",
+    "area": "4500 sq ft",
+    "location": "Lake Tahoe, NV",
+    "facilities": [
+      "Living Room",
+      "Swimming Pool",
+      "Kitchen",
+      "Private Dock",
+      "Home Cinema"
+    ],
+    "image": "https://i.ibb.co.com/85s7Ggk/Lakeside-Mansion1.jpg",
+    "button_text": "View Property"
+  }
+]

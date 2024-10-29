@@ -56,22 +56,29 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         {user ? (
-          <div className="dropdown dropdown-end flex">
+          <div className="dropdown dropdown-end">
             <div
               tabIndex={0}
               role="button"
-              className="btn btn-ghost btn-circle avatar "
+              className="btn btn-ghost btn-circle avatar"
             >
-              <div className="w-10 rounded-full md:tooltip" data-tip="name">
+              <div className="w-10 rounded-full">
                 <img
                   alt="Tailwind CSS Navbar component"
-                  src={user}
+                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
                 />
               </div>
             </div>
-            <div>
-              <button onClick={()=>logOut()} className="btn btn-ghost">Logout</button>
-            </div>
+            <ul
+              tabIndex={0}
+              className="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
+            >
+              <li>
+                <button onClick={() => logOut()} className="btn btn-ghost">
+                  Logout
+                </button>
+              </li>
+            </ul>
           </div>
         ) : (
           <div>
