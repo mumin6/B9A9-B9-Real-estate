@@ -15,9 +15,9 @@ const Estates = () => {
         The Estates
       </h2>
       <div>
-        <div className="grid md:grid-cols-3">
+        <div className="grid md:grid-cols-3 grid-cols-1 md:gap-6 ">
           {estates.map((estate) => (
-            <Estate  key={estate.id} estate={estate}></Estate>
+            <Estate key={estate.id} estate={estate}></Estate>
           ))}
         </div>
       </div>
